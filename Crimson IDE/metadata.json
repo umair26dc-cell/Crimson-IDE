@@ -1,0 +1,6 @@
+{
+  "name": "CCode",
+  "description": "CCode (Crimson Code) - High-contrast crimson-themed developer environment with split-view editing, multi-language syntax highlighting, breadcrumbs, built-in terminal, drag-and-drop file organization, auto-save, code folding, smooth minimap navigation, and cloud synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

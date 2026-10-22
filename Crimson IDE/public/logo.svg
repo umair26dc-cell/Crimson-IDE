@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <!-- Background subtle radial gradient for standalone icon views -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0b0c11" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Main Front Blade Gradient -->
+    <linearGradient id="bladeFront" x1="24" y1="20" x2="104" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff4b72"/>
+      <stop offset="45%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#9f1239"/>
+    </linearGradient>
+
+    <!-- Upper Chevron Wing Gradient -->
+    <linearGradient id="wingTop" x1="30" y1="18" x2="98" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="40%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+
+    <!-- Lower Chevron Wing Gradient -->
+    <linearGradient id="wingBottom" x1="30" y1="110" x2="98" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="50%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#9f1239"/>
+    </linearGradient>
+
+    <!-- Left Origami Fold Shadow -->
+    <linearGradient id="foldShadow" x1="20" y1="40" x2="64" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4c0519"/>
+      <stop offset="60%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+
+    <!-- Center Bridge Highlight -->
+    <linearGradient id="bridgeGloss" x1="44" y1="28" x2="88" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="#ff758f" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Back Spine Gradient -->
+    <linearGradient id="backSpine" x1="94" y1="26" x2="94" y2="102" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="50%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#4c0519"/>
+    </linearGradient>
+
+    <!-- Neon Drop Shadow Filter -->
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGlow)"/>
+
+  <!-- Logo Core Geometry: Origami C-Bracket Ribbon -->
+  <g filter="url(#crimsonGlow)">
+    <!-- 1. Right Rear Spine (Connects upper and lower chevrons behind) -->
+    <path 
+      d="M86 28 L98 38 L98 90 L86 100 L76 86 L84 78 L84 50 L76 42 Z" 
+      fill="url(#backSpine)"
+    />
+
+    <!-- 2. Lower Left Return Fold (Underbelly facet) -->
+    <path 
+      d="M28 88 L52 108 L86 100 L68 84 L46 88 Z" 
+      fill="url(#foldShadow)"
+    />
+
+    <!-- 3. Bottom Forward Chevron / Loop Wing -->
+    <path 
+      d="M24 78 L68 112 L98 90 L76 74 L48 94 L38 86 Z" 
+      fill="url(#wingBottom)"
+    />
+
+    <!-- 4. Upper Left Return Fold (Upper inner facet) -->
+    <path 
+      d="M28 40 L46 40 L68 44 L86 28 L52 20 Z" 
+      fill="url(#foldShadow)"
+    />
+
+    <!-- 5. Top Forward Chevron / Upper Code Bracket Wing -->
+    <path 
+      d="M24 50 L38 42 L48 34 L76 54 L98 38 L68 16 Z" 
+      fill="url(#wingTop)"
+    />
+
+    <!-- 6. Iconic Center Crossing Ribbon Blade (Forms the bold stylized dynamic 'C' fold) -->
+    <path 
+      d="M24 50 L42 64 L24 78 L18 64 Z" 
+      fill="#ff4b72"
+    />
+    
+    <!-- 7. Dynamic Diagonal Crossing Sash -->
+    <path 
+      d="M24 50 L76 14 L96 28 L42 78 L24 78 Z" 
+      fill="url(#bladeFront)"
+    />
+
+    <!-- 8. Lower Crossed Ribbon returning to center -->
+    <path 
+      d="M24 78 L76 114 L96 100 L42 50 L24 50 Z" 
+      fill="url(#bladeFront)" 
+      opacity="0.92"
+    />
+
+    <!-- 9. Inner Negative Space Cutout & Sharp Bracket Apex (<) -->
+    <path 
+      d="M28 64 L54 44 L54 84 Z" 
+      fill="#0c0d14" 
+      opacity="0.85"
+    />
+    
+    <!-- 10. Specular Shimmer Edge on the Crossing Ridge -->
+    <path 
+      d="M24 50 L76 14 L80 18 L32 56 Z" 
+      fill="url(#bridgeGloss)"
+    />
+    <path 
+      d="M24 78 L76 114 L80 110 L32 72 Z" 
+      fill="url(#bridgeGloss)"
+    />
+
+    <!-- 11. Center Glowing Core Point (The nexus of the CsCode ribbon) -->
+    <circle cx="56" cy="64" r="3" fill="#ffe4e6"/>
+  </g>
+</svg>
